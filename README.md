@@ -29,7 +29,11 @@ In this repo you will find some exercices and codes that i have written when lea
     } 
     
 }
+
+
 the value "monday".. between bracket is optional , wa can ad it and set a getter to get it , and we can not , it depends.
+
+
 #### for more code implmentations look at the code exemples within this repo,
  
 ## 2 ANNOTATIONS
