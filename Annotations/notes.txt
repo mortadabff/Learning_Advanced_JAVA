@@ -1,0 +1,17 @@
+#Built-in Annotations in JAVA :
+
+1."@Override":
+Used to indicate that a method in a subclass is intended to override a method in its superclass.
+
+2."@Deprecated":
+Marks a method, class, or field as deprecated, indicating that it is discouraged to use.
+
+3."@SuppressWarnings":
+Suppresses compiler warnings.
+
+4."@Target":
+This is an annotation applied on an annotations when we create it , it  Specifies where the annotation can be applied (e.g., METHOD, FIELD, PARAMETER)
+
+5."@Retention":
+This is also an annotation applied on an annotations when we create it Specifies how long the annotation should be retained (e.g., SOURCE, CLASS, RUNTIME).
+
