@@ -6,16 +6,28 @@ In this repo you will find some exercices and codes that i have written when lea
  In Java, an enumeration (enum) is a special data type that allows you to define a set of named constants. Enumerations are introduced in Java to provide a way to represent a fixed set of constants  (like Days , Months ... ) in a more readable and type-safe manner.
  ### creation ex: Days enum
  public enum Days {
-    MONDAY("monday"), TUESDAY("tuesday"), WEDNESDAY("wednesday"), THURSDAY("thursday"), FRIDAY("friday"), SATURDAY ("satudrday"), SUNDAY ("sunday")
+ 
+    MONDAY("monday"), TUESDAY("tuesday"), WEDNESDAY("wednesday"), THURSDAY("thursday"), 
+    FRIDAY("friday"), SATURDAY ("satudrday"), SUNDAY ("sunday")
+    
    // we can add attribut and we can not; 
     private String value;
+
+    
     // Enum constructor
+    
     public Day(String value) {
+    
         this.value = value;
+        
     }
+    
     public getValue(){
+    
       return value;
+      
     } 
+    
 }
 the value "monday".. between bracket is optional , wa can ad it and set a getter to get it , and we can not , it depends.
 #### for more code implmentations look at the code exemples within this repo,
