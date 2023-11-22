@@ -53,3 +53,7 @@ This is an annotation applied on an annotations when we create it , it  Specifie
 
 5."@Retention":
 This is also an annotation applied on an annotations when we create it Specifies how long the annotation should be retained (e.g., SOURCE, CLASS, RUNTIME).
+## 3 Serialization 
+### def
+Serialization in Java refers to the process of converting an object into a byte stream, which can be easily stored in a file or sent over a network. Deserialization is the process of reconstructing the object from the serialized byte stream. This allows you to persist the state of an object or transfer it between different Java Virtual Machines (JVMs).
+### vue exemple of use in the folder "Serialization"
