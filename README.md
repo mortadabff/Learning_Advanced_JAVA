@@ -164,7 +164,7 @@ In Java, a ThreadPoolExecutor is part of the java.util.concurrent package and pr
      }
    }
 
- ###### Create a ThreadPoolExecutor:
+ ###### Create a ThreadPoolExecutor and  submit tasks:
   
       import java.util.concurrent.Executors;
       import java.util.concurrent.ThreadPoolExecutor;
