@@ -133,5 +133,58 @@ Another approach is to create a class that implements the Runnable interface. Th
 
         // Starting the thread
         myThread.start();
+        
+##### But why we need this second method ? and when we use it 
+Both approaches achieve the goal of creating a new thread, but using Runnable offers several advantages and is often preferred. Here are some reasons why you to choose to implement Runnable:
+
+###### a) Better Object-Oriented Design:
+In Java, you generally prefer composition over inheritance. Implementing Runnable allows you to separate the thread's behavior from the thread itself. Your class can extend another class if needed, and the thread behavior is encapsulated in a separate object.
+
+###### b) Flexibility:
+If you extend the Thread class, you lose the ability to extend any other class because Java supports single inheritance. By implementing Runnable, you can still extend another class if necessary.
+
+###### c) Resource Sharing:
+When you implement Runnable, you can pass the same instance of  your Runnable implementation to multiple threads . This allows multiple threads to share the same resources or perform the same task concurrently.
+        
+         MyRunnable myRunnable = new MyRunnable();
+        // Create multiple threads with the same task
+        Thread thread1 = new Thread(myRunnable);
+        Thread thread2 = new Thread(myRunnable);
+###### d) ThreadPool Usage:
+If you are using a ThreadPoolExecutor or any other executor service, it typically expects tasks to implement the Runnable interface. By implementing Runnable, your task can be submitted to an executor for execution.
+###### ThreadPoolExecutor ? 
+In Java, a ThreadPoolExecutor is part of the java.util.concurrent package and provides a flexible way to manage and execute threads in a pool. Instead of creating a new thread for each task, a thread pool maintains a pool of worker threads that can be reused for different tasks. This can be more efficient than creating a new thread for each task, especially in applications with a high volume of short-lived tasks.
+- ThreadPoolExecutor or any other executor service, tasks are typically represented by objects that implement the Runnable interface. The Runnable interface defines a single method, run(), which contains the code that will be executed by the task.
+###### exemple:
+ ###### Define a Runnable Task:
+    class MyTask implements Runnable {
+        public void run() {
+        // Task logic goes here
+        System.out.println("Task is running");
+     }
+   }
+
+ ###### Create a ThreadPoolExecutor:
+  
+      import java.util.concurrent.Executors;
+      import java.util.concurrent.ThreadPoolExecutor;
+      public class ThreadPoolExample {
+          public static void main(String[] args) {
+          ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+          // Submitting tasks to the executor
+          for (int i = 0; i < 10; i++) {
+            executor.submit(new MyTask());
+         }
+      }
+   }
+
+The executor will manage the execution of these tasks using the available threads in the pool.
+###### for more look at the "Java executer service " 
+###### e) Encapsulation:
+Separating the task from the thread allows for better encapsulation. The Runnable instance represents the task or job to be executed by the thread, and the Thread class is used solely for managing the thread.
+
+###### f) Cleaner Code:
+Code that implements Runnable is often considered cleaner and more modular. It clearly separates the task's logic from the threading details, making the code easier to understand and maintain.
+
  
 
