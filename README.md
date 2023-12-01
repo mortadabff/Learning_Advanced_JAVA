@@ -89,7 +89,48 @@ class Person implements Serializable {
             e.printStackTrace();
         }
  ## 4 - Concurrency and Threads
- 
-   
+ ### def
+ ##### Threads:
+In Java, a thread is the smallest unit of execution within a process. It represents an independent flow of control in a program. Java supports multithreading, allowing multiple threads to run concurrently within a single program. Each thread has its own stack and program counter, but they share the same heap memory.
 
+##### Concurrency:
+Concurrency in Java refers to the ability of a program to execute multiple threads in parallel. It allows different parts of a program to be executed independently and potentially simultaneously. Concurrency is essential for improving the performance of applications, especially in systems with multiple processors or cores.
+
+### Two Methods for Creating a Thread in Java:
+##### 1) Extending the Thread Class:
+You can create a new class that extends the Thread class and overrides its run() method. The run() method contains the code that will be executed in the new thread.
+###### creating a class extending Thread class that is implemented in the JDK 
+class MyThread extends Thread {
+    public void run() {
+        // Code to be executed in the new thread
+        System.out.println("Thread is running");
+    }
+}
+
+###### test 
+        // Creating an instance of your custom thread class
+        MyThread myThread = new MyThread();
+
+        // Starting the thread
+        myThread.start();
+ ##### 2) Implementing the Runnable Interface:
+Another approach is to create a class that implements the Runnable interface. This class must provide a run() method. Then, you can create an instance of Thread and pass an instance of your class to its constructor. 
+###### creating a class implementing  Runnable interface that is implemented in the JDK 
+class MyRunnable implements Runnable {
+    public void run() {
+        // Code to be executed in the new thread
+        System.out.println("Thread is running");
+    }
+}
+
+###### test 
+        // Creating an instance of your class implementing Runnable
+        MyRunnable myRunnable = new MyRunnable();
+
+        // Creating an instance of Thread and passing your Runnable instance
+        Thread myThread = new Thread(myRunnable);
+
+        // Starting the thread
+        myThread.start();
+ 
 
