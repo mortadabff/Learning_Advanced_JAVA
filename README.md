@@ -35,7 +35,7 @@ In this repo you will find some exercices and codes that i have written when lea
 the value "monday".. between bracket is optional , wa can ad it and set a getter to get it , and we can not , it depends.
 
 
-#### for more code implmentations look at the code exemples within this repo,
+#### for more code implmentations look at the code examples within this repo,
  
 ## 2 - ANNOTATIONS
 ### Built-in Annotations in JAVA :
@@ -57,7 +57,7 @@ This is also an annotation applied on an annotations when we create it Specifies
 ## 3 - Serialization 
 ### def
 Serialization in Java refers to the process of converting an object into a byte stream, which can be easily stored in a file or sent over a network. Deserialization is the process of reconstructing the object from the serialized byte stream. This allows you to persist the state of an object or transfer it between different Java Virtual Machines (JVMs).
-### Exemples : (for more look at the code in the .java file) 
+### Examples : (for more look at the code in the .java file) 
 
 
 // A simple class that implements Serializable
@@ -155,7 +155,7 @@ If you are using a ThreadPoolExecutor or any other executor service, it typicall
 ###### ThreadPoolExecutor ? 
 In Java, a ThreadPoolExecutor is part of the java.util.concurrent package and provides a flexible way to manage and execute threads in a pool. Instead of creating a new thread for each task, a thread pool maintains a pool of worker threads that can be reused for different tasks. This can be more efficient than creating a new thread for each task, especially in applications with a high volume of short-lived tasks.
 - ThreadPoolExecutor or any other executor service, tasks are typically represented by objects that implement the Runnable interface. The Runnable interface defines a single method, run(), which contains the code that will be executed by the task.
-###### exemple:
+###### example:
  ###### Define a Runnable Task:
     class MyTask implements Runnable {
         public void run() {
