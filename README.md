@@ -1,7 +1,7 @@
 # Learning_Advanced_JAVA
 A repo for learning advanced concepts in JAVA 
 In this repo you will find some exercices and codes that i have written when learning some advanced notions and features in JAVA porogramming language
-## 1 ENUMERATIONS
+## 1 - ENUMERATIONS
  ### def 
  In Java, an enumeration (enum) is a special data type that allows you to define a set of named constants. Enumerations are introduced in Java to provide a way to represent a fixed set of constants  (like Days , Months ... ) in a more readable and type-safe manner.
  ### creation ex: Days enum
@@ -36,7 +36,7 @@ the value "monday".. between bracket is optional , wa can ad it and set a getter
 
 #### for more code implmentations look at the code exemples within this repo,
  
-## 2 ANNOTATIONS
+## 2 - ANNOTATIONS
 ### Built-in Annotations in JAVA :
 
 1."@Override":
@@ -53,7 +53,42 @@ This is an annotation applied on an annotations when we create it , it  Specifie
 
 5."@Retention":
 This is also an annotation applied on an annotations when we create it Specifies how long the annotation should be retained (e.g., SOURCE, CLASS, RUNTIME).
-## 3 Serialization 
+## 3 - Serialization 
 ### def
 Serialization in Java refers to the process of converting an object into a byte stream, which can be easily stored in a file or sent over a network. Deserialization is the process of reconstructing the object from the serialized byte stream. This allows you to persist the state of an object or transfer it between different Java Virtual Machines (JVMs).
-### vue exemple of use in the folder "Serialization"
+### Exemples : (for more look at the code in the .java file) 
+
+
+// A simple class that implements Serializable
+class Person implements Serializable {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+#### test in the main
+        Person person = new Person("John", 25);
+
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.ser"))) {
+            // Serialize the object to a file
+            oos.writeObject(person);
+            System.out.println("Object serialized successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+ ## 4 - Concurrency and Threads
+ 
+   
+
+
