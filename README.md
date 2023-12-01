@@ -186,5 +186,39 @@ Separating the task from the thread allows for better encapsulation. The Runnabl
 ###### f) Cleaner Code:
 Code that implements Runnable is often considered cleaner and more modular. It clearly separates the task's logic from the threading details, making the code easier to understand and maintain.
 
- 
+## 5 - Synchronization
+### Def:
+In Java, synchronization is a concept that is used to control access to shared resources or data by multiple threads. When multiple threads are accessing and modifying shared data concurrently, there is a potential for data corruption or inconsistency. Synchronization helps to ensure that only one thread can access a shared resource at a time, preventing race conditions and maintaining data integrity.
+-> There are several ways to achieve synchronization in Java, and some common techniques include the use of synchronized methods, synchronized blocks, and locks.
+#### 1) First method : Synchronized Methods
+You can declare a method as synchronized by using the synchronized keyword. When a thread enters a synchronized method, it acquires the lock associated with the object and releases it when the method exits.
+    public synchronized void increment() {
+        count++;
+    }
+#### 2) Second method : Synchronized Blocks
+Synchronized Blocks:
+Instead of synchronizing entire methods, you can use synchronized blocks to control access to specific sections of code.
 
+     public void increment() {
+        synchronized (lock) {
+            count++;
+        }
+     }
+#### 3) Third method : Locks
+The java.util.concurrent.locks package provides more flexible lock implementations. The ReentrantLock is commonly used for synchronization.
+
+import package needed: 
+ 
+  import java.util.concurrent.locks.Lock;
+  import java.util.concurrent.locks.ReentrantLock;
+
+Using lock method
+
+     public void increment() {
+        lock.lock();
+        try {
+            count++;
+        } finally {
+            lock.unlock();
+        }
+    }
