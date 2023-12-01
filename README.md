@@ -3,6 +3,7 @@ A repo for learning advanced concepts in JAVA
 In this repo you will find some exercices and codes that i have written when learning some advanced notions and features in JAVA porogramming language
 ## 1 - ENUMERATIONS
  ### def 
+ 
  In Java, an enumeration (enum) is a special data type that allows you to define a set of named constants. Enumerations are introduced in Java to provide a way to represent a fixed set of constants  (like Days , Months ... ) in a more readable and type-safe manner.
  ### creation ex: Days enum
  public enum Days {
