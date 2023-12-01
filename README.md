@@ -116,12 +116,13 @@ class MyThread extends Thread {
  ##### 2) Implementing the Runnable Interface:
 Another approach is to create a class that implements the Runnable interface. This class must provide a run() method. Then, you can create an instance of Thread and pass an instance of your class to its constructor. 
 ###### creating a class implementing  Runnable interface that is implemented in the JDK 
-class MyRunnable implements Runnable {
-    public void run() {
+
+    class MyRunnable implements Runnable {
+        public void run() {
         // Code to be executed in the new thread
         System.out.println("Thread is running");
-    }
-}
+      }
+   }
 
 ###### test 
         // Creating an instance of your class implementing Runnable
