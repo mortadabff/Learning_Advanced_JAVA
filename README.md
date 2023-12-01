@@ -209,8 +209,8 @@ The java.util.concurrent.locks package provides more flexible lock implementatio
 
 import package needed: 
  
-  import java.util.concurrent.locks.Lock;
-  import java.util.concurrent.locks.ReentrantLock;
+     import java.util.concurrent.locks.Lock;
+     import java.util.concurrent.locks.ReentrantLock;
 
 Using lock method
 
